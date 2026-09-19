@@ -1,2 +1,3 @@
-# adaptive-smart-traffic-signal
 Adaptive Smart Traffic Signal Controller using Raspberry Pi,IR Sensor and QNX
+Description:
+Raspberry Pi 4 running QNX Momentics acts as the central real-time traffic controller. IR and ultrasonic sensors provide traffic inputs, which are processed by concurrent, priority-based threads using `SCHED_FIFO` scheduling. The system uses dedicated tasks for Emergency Handling, Traffic Detection, Signal Control, and Traffic Analytics, with higher priorities assigned to critical operations. Based on sensor inputs, the controller dynamically switches between **Normal, Peak, and Emergency modes** and controls Lane A and Lane B traffic LEDs through GPIO while maintaining safe, conflict-free signal transitions.
